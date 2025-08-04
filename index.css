@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Option 1: Sunset Orange/Pink Gradient */
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  
+  /* Option 2: Ocean Blue/Teal Gradient */
+  /* background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%); */
+  
+  /* Option 3: Forest Green/Emerald Gradient */
+  /* background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); */
+  
+  /* Option 4: Galaxy Purple/Pink Gradient */
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  
+  /* Option 5: Dark Night Theme */
+  /* background: linear-gradient(135deg, #232526 0%, #414345 100%); */
+  
+  /* Option 6: Warm Sunset */
+  /* background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); */
+  
+  /* Option 7: Cool Mint */
+  /* background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
+  
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+  padding: 30px 25px;
+  animation: slideUp 0.8s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(50px) scale(0.9); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2d3748;
+  font-size: 24px;
+  font-weight: 600;
+  /* Option 1: Sunset Theme - Orange/Pink Gradient Text */
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  
+  /* Option 2: Ocean Theme - Blue/Teal Gradient Text */
+  /* background: linear-gradient(135deg, #00d2ff, #3a7bd5); */
+  
+  /* Option 3: Forest Theme - Green/Emerald Gradient Text */
+  /* background: linear-gradient(135deg, #11998e, #38ef7d); */
+  
+  /* Option 4: Galaxy Theme - Purple/Pink Gradient Text */
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  
+  /* Option 5: Dark Theme - Silver Gradient Text */
+  /* background: linear-gradient(135deg, #bdc3c7, #2c3e50); */
+  
+  /* Option 6: Warm Sunset Theme - Pink/Red Gradient Text */
+  /* background: linear-gradient(135deg, #f093fb, #f5576c); */
+  
+  /* Option 7: Cool Mint Theme - Blue/Cyan Gradient Text */
+  /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: white;
+  color: #2d3748;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  /* Option 1: Sunset Theme - Orange Border */
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+  
+  /* Option 2: Ocean Theme - Blue Border */
+  /* border-color: #00d2ff;
+  box-shadow: 0 0 0 3px rgba(0, 210, 255, 0.1); */
+  
+  /* Option 3: Forest Theme - Green Border */
+  /* border-color: #11998e;
+  box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.1); */
+  
+  /* Option 4: Galaxy Theme - Purple Border */
+  /* border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); */
+  
+  /* Option 5: Dark Theme - Silver Border */
+  /* border-color: #bdc3c7;
+  box-shadow: 0 0 0 3px rgba(189, 195, 199, 0.1); */
+  
+  /* Option 6: Warm Sunset Theme - Pink Border */
+  /* border-color: #f093fb;
+  box-shadow: 0 0 0 3px rgba(240, 147, 251, 0.1); */
+  
+  /* Option 7: Cool Mint Theme - Cyan Border */
+  /* border-color: #4facfe;
+  box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1); */
+  
+  outline: none;
+  transform: translateY(-2px);
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  background: linear-gradient(135deg, #f7fafc, #edf2f7);
+  padding: 12px 16px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 2px solid transparent;
+  font-size: 13px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.radio-group label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.radio-group label:hover::before {
+  left: 0;
+  opacity: 0.1;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 8px;
+  /* Option 1: Sunset Theme - Orange Accent */
+  accent-color: #ff6b6b;
+  
+  /* Option 2: Ocean Theme - Blue Accent */
+  /* accent-color: #00d2ff; */
+  
+  /* Option 3: Forest Theme - Green Accent */
+  /* accent-color: #11998e; */
+  
+  /* Option 4: Galaxy Theme - Purple Accent */
+  /* accent-color: #667eea; */
+  
+  /* Option 5: Dark Theme - Silver Accent */
+  /* accent-color: #bdc3c7; */
+  
+  /* Option 6: Warm Sunset Theme - Pink Accent */
+  /* accent-color: #f093fb; */
+  
+  /* Option 7: Cool Mint Theme - Cyan Accent */
+  /* accent-color: #4facfe; */
+}
+
+.radio-group label:hover {
+  transform: translateY(-2px);
+  /* Option 1: Sunset Theme - Orange Shadow */
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.2);
+  border-color: #ff6b6b;
+  color: #ff6b6b;
+  
+  /* Option 2: Ocean Theme - Blue Shadow */
+  /* box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2);
+  border-color: #00d2ff;
+  color: #00d2ff; */
+  
+  /* Option 3: Forest Theme - Green Shadow */
+  /* box-shadow: 0 5px 15px rgba(17, 153, 142, 0.2);
+  border-color: #11998e;
+  color: #11998e; */
+  
+  /* Option 4: Galaxy Theme - Purple Shadow */
+  /* box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+  border-color: #667eea;
+  color: #667eea; */
+  
+  /* Option 5: Dark Theme - Silver Shadow */
+  /* box-shadow: 0 5px 15px rgba(189, 195, 199, 0.2);
+  border-color: #bdc3c7;
+  color: #bdc3c7; */
+  
+  /* Option 6: Warm Sunset Theme - Pink Shadow */
+  /* box-shadow: 0 5px 15px rgba(240, 147, 251, 0.2);
+  border-color: #f093fb;
+  color: #f093fb; */
+  
+  /* Option 7: Cool Mint Theme - Cyan Shadow */
+  /* box-shadow: 0 5px 15px rgba(79, 172, 254, 0.2);
+  border-color: #4facfe;
+  color: #4facfe; */
+}
+
+.radio-group input[type="radio"]:checked + label,
+.radio-group label:has(input[type="radio"]:checked) {
+  /* Option 1: Sunset Theme - Orange/Yellow Gradient */
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  border-color: #ff6b6b;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+  
+  /* Option 2: Ocean Theme - Blue/Teal Gradient */
+  /* background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  border-color: #00d2ff;
+  box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3); */
+  
+  /* Option 3: Forest Theme - Green/Emerald Gradient */
+  /* background: linear-gradient(135deg, #11998e, #38ef7d);
+  border-color: #11998e;
+  box-shadow: 0 8px 20px rgba(17, 153, 142, 0.3); */
+  
+  /* Option 4: Galaxy Theme - Purple/Pink Gradient */
+  /* background: linear-gradient(135deg, #667eea, #764ba2);
+  border-color: #667eea;
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3); */
+  
+  /* Option 5: Dark Theme - Dark Gradient */
+  /* background: linear-gradient(135deg, #2c3e50, #bdc3c7);
+  border-color: #bdc3c7;
+  box-shadow: 0 8px 20px rgba(189, 195, 199, 0.3); */
+  
+  /* Option 6: Warm Sunset Theme - Pink/Red Gradient */
+  /* background: linear-gradient(135deg, #f093fb, #f5576c);
+  border-color: #f093fb;
+  box-shadow: 0 8px 20px rgba(240, 147, 251, 0.3); */
+  
+  /* Option 7: Cool Mint Theme - Blue/Cyan Gradient */
+  /* background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border-color: #4facfe;
+  box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3); */
+  
+  color: white;
+  transform: translateY(-2px);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit-btn {
+  width: 100%;
+  /* Option 1: Sunset Theme - Orange/Yellow Gradient */
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  
+  /* Option 2: Ocean Theme - Blue/Teal Gradient */
+  /* background: linear-gradient(135deg, #00d2ff, #3a7bd5); */
+  
+  /* Option 3: Forest Theme - Green/Emerald Gradient */
+  /* background: linear-gradient(135deg, #11998e, #38ef7d); */
+  
+  /* Option 4: Galaxy Theme - Purple/Pink Gradient */
+  /* background: linear-gradient(135deg, #667eea, #764ba2); */
+  
+  /* Option 5: Dark Theme - Dark Gradient */
+  /* background: linear-gradient(135deg, #2c3e50, #34495e); */
+  
+  /* Option 6: Warm Sunset Theme - Pink/Red Gradient */
+  /* background: linear-gradient(135deg, #f093fb, #f5576c); */
+  
+  /* Option 7: Cool Mint Theme - Blue/Cyan Gradient */
+  /* background: linear-gradient(135deg, #4facfe, #00f2fe); */
+  
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  /* Option 1: Sunset Theme - Reversed Orange/Yellow Gradient */
+  background: linear-gradient(135deg, #feca57, #ff6b6b);
+  
+  /* Option 2: Ocean Theme - Reversed Blue/Teal Gradient */
+  /* background: linear-gradient(135deg, #3a7bd5, #00d2ff); */
+  
+  /* Option 3: Forest Theme - Reversed Green/Emerald Gradient */
+  /* background: linear-gradient(135deg, #38ef7d, #11998e); */
+  
+  /* Option 4: Galaxy Theme - Reversed Purple/Pink Gradient */
+  /* background: linear-gradient(135deg, #764ba2, #667eea); */
+  
+  /* Option 5: Dark Theme - Reversed Dark Gradient */
+  /* background: linear-gradient(135deg, #34495e, #2c3e50); */
+  
+  /* Option 6: Warm Sunset Theme - Reversed Pink/Red Gradient */
+  /* background: linear-gradient(135deg, #f5576c, #f093fb); */
+  
+  /* Option 7: Cool Mint Theme - Reversed Blue/Cyan Gradient */
+  /* background: linear-gradient(135deg, #00f2fe, #4facfe); */
+  
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.submit-btn:hover::before {
+  left: 0;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  /* Option 1: Sunset Theme - Orange Shadow */
+  box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+  
+  /* Option 2: Ocean Theme - Blue Shadow */
+  /* box-shadow: 0 10px 25px rgba(0, 210, 255, 0.4); */
+  
+  /* Option 3: Forest Theme - Green Shadow */
+  /* box-shadow: 0 10px 25px rgba(17, 153, 142, 0.4); */
+  
+  /* Option 4: Galaxy Theme - Purple Shadow */
+  /* box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4); */
+  
+  /* Option 5: Dark Theme - Dark Shadow */
+  /* box-shadow: 0 10px 25px rgba(44, 62, 80, 0.4); */
+  
+  /* Option 6: Warm Sunset Theme - Pink Shadow */
+  /* box-shadow: 0 10px 25px rgba(240, 147, 251, 0.4); */
+  
+  /* Option 7: Cool Mint Theme - Cyan Shadow */
+  /* box-shadow: 0 10px 25px rgba(79, 172, 254, 0.4); */
+}
+
+.submit-btn:active {
+  transform: translateY(-1px);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  
+  .container {
+    padding: 25px 20px;
+    border-radius: 20px;
+    max-width: 100%;
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    padding: 14px 16px;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .radio-group {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 10px;
+  }
+  
+  .radio-group label {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Tablet and Desktop Optimizations */
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+  
+  .container {
+    max-width: 600px;
+    padding: 50px 45px;
+    border-radius: 30px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .radio-group {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+  
+  .radio-group label {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    padding: 16px 20px;
+    font-size: 15px;
+  }
+  
+  .submit-btn {
+    padding: 18px;
+    font-size: 17px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 650px;
+    padding: 60px 50px;
+  }
+  
+  .radio-group {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  }
+  
+  .container {
+    background: rgba(45, 55, 72, 0.95);
+    color: #e2e8f0;
+  }
+  
+  h2 {
+    color: #e2e8f0;
+  }
+  
+  label {
+    color: #cbd5e0;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    background: #4a5568;
+    border-color: #4a5568;
+    color: #e2e8f0;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #667eea;
+    background: #2d3748;
+  }
+}
+
+/* Loading animation for form submission */
+.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.loading .submit-btn {
+  background: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Success animation */
+.success-animation {
+  animation: successPulse 0.6s ease-in-out;
+}
+
+@keyframes successPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

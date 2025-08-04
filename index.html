@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hackathon Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Animate.css for animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <h2>🚀 Hackathon Registration</h2>
+    <form action="https://script.google.com/macros/s/AKfycbyjjjobDho4rO7FXBz7300odzdbUDvlaZ8VgMZROGnXnNONeAdNJrOCIv9F7ZMVMJVvqQ/exec" method="POST" name="hackathonForm">
+      
+      <div class="form-group">
+        <label for="Name">👤Team Leader Name</label>
+        <input type="text" id="Name" name="Name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="rollno">🎓 Roll Number</label>
+        <input type="text" id="rollno" name="rollno" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">📧 College Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="branch">🏢 Branch</label>
+        <div class="radio-group">
+          <label><input type="radio" name="branch" value="CSD" required /> CSD</label>
+          <label><input type="radio" name="branch" value="IS" /> IS</label>
+          <label><input type="radio" name="branch" value="SS" /> SS</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="year">📅 Year</label>
+        <div class="radio-group">
+          <label><input type="radio" name="year" value="l" required /> 1st</label>
+          <label><input type="radio" name="year" value="ll" /> 2nd</label>
+          <label><input type="radio" name="year" value="lll" /> 3rd</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="team">🏆 Team Name</label>
+        <input type="text" id="team" name="team" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="members">👥 Team Members</label>
+        <textarea id="members" name="members" rows="4" placeholder="Enter team members with roll numbers (e.g. Ravi R 23BSR002, Mani M 23BSR023...)"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="problm">🎯 Problem Statement Number</label>
+        <input type="text" name="problm" id="problm" required/>
+      </div>
+
+      <button class="submit-btn" type="submit">✨ Register Now</button>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
