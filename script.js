@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyjjjobDho4rO7FXBz7300odzdbUDvlaZ8VgMZROGnXnNONeAdNJrOCIv9F7ZMVMJVvqQ/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxRHtdqbEOzvL0lhi_juobhLCYljbn4Tp9CNclwfvb3jsW5hLbJfJqPSOD8cUPvSRRj/exec'
 
 const form = document.forms['hackathonForm']
 
