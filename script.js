@@ -20,6 +20,7 @@ form.addEventListener('submit', async (e) => {
   
   try {
     const response = await fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    // const result = await response.json(); // Read JSON from server
     
     if (response.ok) {
       // Show success message
@@ -43,13 +44,12 @@ form.addEventListener('submit', async (e) => {
           `
         }
       })
-      
-      // Reload page after user clicks OK
+
+ 
       window.location.reload()
     } else {
-      throw new Error('Network response was not ok')
+      throw new Error(result.error || 'Data not saved to sheet');
     }
-    
   } catch (error) {
     console.error('Error!', error.message)
     
